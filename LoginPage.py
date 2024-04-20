@@ -69,6 +69,7 @@ def app():
 
         if choice == "Signup":
             st.subheader("Signup")
+            
             email = st.text_input("Email:")
             create_password = st.text_input("Create Password:", type="password")
             confirm_password = st.text_input("Confirm Password:", type="password")
@@ -80,7 +81,7 @@ def app():
                 try:
                     user = auth.create_user_with_email_and_password(email, confirm_password)
                     st.success('Your account is created sucessfully!')
-
+                    st.title('Welcome' + username)
                     # Sign in
                     user = auth.sign_in_with_email_and_password(email, confirm_password)
 
@@ -100,7 +101,7 @@ def app():
         elif choice == "Login":
             
             st.subheader("Login")
-            st.title('Welcome' + username)
+            
             email = st.text_input("Email:")
             password = st.text_input("Password:", type="password")
 
