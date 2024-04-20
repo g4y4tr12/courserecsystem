@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300&family=Balsamiq+Sans&family=Itim&family=Kalam&family=Pathway+Gothic+One&family=Patua+One&family=Signika:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&family=Balsamiq+Sans&family=Itim&family=Kalam&family=Pathway+Gothic+One&family=Patua+One&family=Signika:wght@500&display=swap');
+
+.common {
+    text-align: center;
+}
+
+.title {
+    font-size: x-large;
+}
+
+.boxitem {
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+#inputimg {
+    vertical-align: top;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    box-shadow: 0 2px 22px 0 rgb(0 0 0 / 10%);
+    transition: .2s border;
+    margin-left: 220px;
+}
+
+#clearbtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 53px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family:'Orbitron', sans-serif;
+    /*font-family: 'Arima Madurai', cursive;*/
+        text-decoration: none;
+    background-color:#51b7c5;
+    border: none;
+    border-radius: 100px;
+    color: #FFF;
+    cursor: pointer;
+    transition: .2s background-color, .2s color;
+    margin-left:220px;
+}
+
+#pred {
+    width: 196px;
+    height: 196px;
+    line-height: 196px;
+    font-size: 160px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    box-shadow: 0 2px 22px 0 rgb(0 0 0 / 10%);
+    transition: .2s border;
+}
+
+header{ 
+    background-color:#51b7c5;
+    min-height: 69px;
+    height: 100px;
+    font-size: 40px;
+    border-radius:30px;
+}
+
+h1 {
+    font-size: 100px;   
+    font-family:'Orbitron', sans-serif;
+   /*font-family: 'Arima Madurai', cursive;*/
+    color:white;
+    padding-top: 40px;
+
+    
+    }
+
+footer{
+    background:#51b7c5;
+    min-height: 69px;
+    height: 130px;
+    font-size: 40 px;
+    text-align: center;
+    font-family:'Orbitron', sans-serif;
+
+   /* font-family: 'Arima Madurai', cursive;*/
+}
+
