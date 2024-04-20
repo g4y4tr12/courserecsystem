@@ -98,8 +98,9 @@ def app():
 
 
         elif choice == "Login":
-            st.title('Welcome' + username)
+            
             st.subheader("Login")
+            st.title('Welcome' + username)
             email = st.text_input("Email:")
             password = st.text_input("Password:", type="password")
 
