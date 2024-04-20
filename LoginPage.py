@@ -90,14 +90,15 @@ def app():
 
                     db.child(user['localId']).child("Username").set(username)
                     db.child(user['localId']).child("ID").set(user['localId'])
-                    st.title('Welcome' + username)
-                    st.info('Login via login drop down selection')
+                   
+                    # st.info('Login via login drop down selection')
                 except Exception as e:
                     st.error(f"Signup Failed: {str(e)}")
 
 
 
         elif choice == "Login":
+            st.title('Welcome' + username)
             st.subheader("Login")
             email = st.text_input("Email:")
             password = st.text_input("Password:", type="password")
@@ -111,7 +112,7 @@ def app():
                     # console.log(user)
                     st.success("Login Successful")
                     # st.markdown(f'<a href="Dashboard?user_id={user["localId"]}" target="_self">Get Started</a>', unsafe_allow_html=True)
-                    st.markdown(f'<a href="Dashboard?user_id={user["localId"]}" target="_self" class="button">Get Started</a>',unsafe_allow_html=True)
+                    st.markdown(f'<a href="Dashboard?{user["localId"]}" target="_self" class="button">Get Started</a>',unsafe_allow_html=True)
                     st.markdown( """
     <style>
     .button {

@@ -209,7 +209,9 @@ def display_course_cards(data):
         on_click = functools.partial(on_interested_button_click, row['course_title'])
         if st.button('Interested', key=button_key, on_click=on_click):
             # Do not append the course title here, it's done in on_interested_button_click
-            pass
+            st.image("image/tick.png", width=30)
+
+            # pass
         st.write("----")
 
 
@@ -249,7 +251,24 @@ def app():
                         display_course_cards(recommendations)
 
                 else:
-                    st.write("No course titles found for user_id:", user_id)
+                    # st.write("No course titles found for user_id:", user_id)
+                    search_term = st.text_input("Search")
+                    if st.button("Search"):
+                        if search_term is not None:
+                            try:
+                                st.info("Suggested Options include")
+
+                                result_df = search_term_if_not_found(search_term, df)
+                    # Display searched courses on the Recommended page
+                                display_course_cards(result_df)
+                    
+
+                    # st.subheader("Recommended Courses:")
+                    # results = get_recommendation(search_term,cosine_sim_mat,df)
+                            except:
+                                st.write("Kuch to gadbad hai")
+                                display_course_cards(result_df)
+
             else:
                 st.write("Failed to retrieve data from the Firebase Realtime Database.")
    
